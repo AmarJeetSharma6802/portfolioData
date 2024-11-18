@@ -11,7 +11,7 @@ dotenv.config();
 
 // CORS Configuration
 app.use(cors({
-    origin: 'http://127.0.0.1:3000', // Adjust based on your frontend URL
+    origin: 'https://portfolio-beta-dusky-34.vercel.app/', // Adjust based on your frontend URL
     credentials: true
 }));
 
