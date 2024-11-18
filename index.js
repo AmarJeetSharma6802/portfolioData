@@ -45,6 +45,7 @@ app.post("/portfolio/register", async (req, res) => {
         const userExist = await portfolioData.findOne({
             $or: [{ email }, { phone }, { name }]
           });
+          console.log("userExist",userExist)
           
 
         if (userExist) {
