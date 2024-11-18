@@ -11,7 +11,7 @@ dotenv.config();
 
 // CORS Configuration
 app.use(cors({
-    origin: 'https://portfolio-5y00jil8e-amarjeetsharma6802s-projects.vercel.app', // Adjust based on your frontend URL
+    origin: 'https://portfolio-beta-dusky-34.vercel.app', // Adjust based on your frontend URL
     credentials: true
 }));
 
