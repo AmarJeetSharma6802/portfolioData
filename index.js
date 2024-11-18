@@ -43,8 +43,9 @@ app.post("/portfolio/register", async (req, res) => {
 
         // Check if the user already exists
         const userExist = await portfolioData.findOne({
-            $or: [{ name }, { email }, { phone }]
-        });
+            $or: [{ email }, { phone }, { name }]
+          });
+          
 
         if (userExist) {
             return res.status(400).json({ message: "User already exists" });
