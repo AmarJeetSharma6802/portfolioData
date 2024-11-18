@@ -18,15 +18,17 @@ app.use(express.json());
 // MongoDB connection function
 const connectDb = async () => {
     try {
-        const connect = await mongoose.connect(`${process.env.ATLAS_DB}/PORTFOLIO`);      
+        const connect = await mongoose.connect(process.env.ATLAS_DB, {
+            useNewUrlParser: true,  
+            useUnifiedTopology: true 
+        });
         console.log(`MongoDB Connected: ${connect.connection.host}`);
     } catch (error) {
         console.error("Error connecting to MongoDB:", error);
         process.exit(1); 
     }
-}; 
- 
-// Call the connectDb function to connect to the database
+};
+
 connectDb();       
 
 // Register endpoint
