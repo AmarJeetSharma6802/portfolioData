@@ -18,7 +18,7 @@ app.use(express.json());
 // MongoDB connection function
 const connectDb = async () => {
     try {
-        const connect = await mongoose.connect(`${process.env.MONGODB_URL}/PORTFOLIO`);      
+        const connect = await mongoose.connect(`${process.env.ATLAS_DB}/PORTFOLIO`);      
         console.log(`MongoDB Connected: ${connect.connection.host}`);
     } catch (error) {
         console.error("Error connecting to MongoDB:", error);
