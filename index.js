@@ -10,9 +10,17 @@ const app = express();
 dotenv.config();
 
 // CORS Configuration
+// app.use(cors({
+//     origin: 'https://portfolio-beta-dusky-34.vercel.app', 
+//     credentials: true
+// }));
+
 app.use(cors({
-    origin: 'https://portfolio-beta-dusky-34.vercel.app', // Adjust based on your frontend URL
-    credentials: true
+  origin: [
+    'https://portfolio-beta-dusky-34.vercel.app',
+    'https://amarjeet-sharma.vercel.app/'
+  ],
+  credentials: true
 }));
 
 app.use(express.json());
