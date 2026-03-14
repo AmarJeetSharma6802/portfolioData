@@ -18,7 +18,7 @@ dotenv.config();
 app.use(cors({
   origin: [
     'https://portfolio-beta-dusky-34.vercel.app',
-    'https://amarjeet-sharma.vercel.app/'
+    'https://amarjeet-sharma.vercel.app'
   ],
   credentials: true
 }));
